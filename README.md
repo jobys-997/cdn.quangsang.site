@@ -1,1 +1,1 @@
-# cdn.quangsang.site
+# Quang Sáng Đẹp Trai
