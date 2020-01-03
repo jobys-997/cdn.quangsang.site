@@ -1,22 +1,3 @@
-// ---------------------------------------------------
-// BLOGTOC
-// ---------------------------------------------------
-// BlogToc creates a clickable Table Of Contents for
-// Blogger Blogs.
-// It uses the JSON post feed, and create a ToC of it.
-// The ToC can be sorted by title or by date, both
-// ascending and descending, and can be filtered by
-// label.
-// ---------------------------------------------------
-// Author: Tai lieu mien phi
-// Url: http://www.123tailieufree.com/
-// Version: 2
-// Date: 2007-04-12
-// ---------------------------------------------------
-// Thu thuat blog 
-// http://www.windows2it.com/
-// Date : 02-08-2011
-// global arrays
 
    var postTitle = new Array();     // array of posttitles
    var postUrl = new Array();       // array of posturls
@@ -182,11 +163,11 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
    var numDisplayed = 0;
    var tocTable = '';
-   var tocHead1 = 'POST TITLE';
-   var tocTool1 = 'Click to sort by title';
-   var tocHead2 = 'POST DATE';
-   var tocTool2 = 'Click to sort by date';
-   var tocHead3 = 'LABELS';
+   var tocHead1 = 'Bài Viết';
+   var tocTool1 = 'Nhấn vào đây để sắp xếp theo tiêu đề';
+   var tocHead2 = 'Ngày Đăng';
+   var tocTool2 = 'Nhấn vào đây để sắp xếp theo tiêu đề';
+   var tocHead3 = 'Nhãn';
    var tocTool3 = '';
    if (sortBy == "titleasc") { 
       tocTool1 += ' (descending)';
@@ -233,10 +214,10 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note">Displaying all ' + postTitle.length + ' posts<br/></span>'; }
+      var tocNote = '<span class="toc-note">Hiển thị tất cả ' + postTitle.length + ' bài viết<br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
-      tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
+      var tocNote = '<span class="toc-note">Hiển thị ' + numDisplayed + ' bài viết có nhãn \'';
+      tocNote += postFilter + '\' of '+ postTitle.length + ' tổng số bài viết<br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
 } // end of displayToc
@@ -262,12 +243,12 @@ function showToc() {
      var toclink = document.getElementById("toclink");
    
   }
-  else { alert("Just wait... TOC is loading"); }
+  else { alert("Đang tải...."); }
 }
 
 function hideToc() {
   var tocdiv = document.getElementById("toc");
   tocdiv.innerHTML = '';
   var toclink = document.getElementById("toclink");
-  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">� Show Table of Contents</a> <img src="https://1.bp.blogspot.com/-MMsDm64XZtM/VzQD8tvFJ-I/AAAAAAAAXhk/L2JgChUq2_w0vZHuPhaPGp_xGuA_YDaKQCLcB/s1600/new_1.gif"/>';
+  toclink.innerHTML = '<a href="#" onclick="scroll(0,0); showToc(); Effect.toggle('+"'toc-result','blind');"+'">� Hiển thị mục lục</a> <img src="https://1.bp.blogspot.com/-MMsDm64XZtM/VzQD8tvFJ-I/AAAAAAAAXhk/L2JgChUq2_w0vZHuPhaPGp_xGuA_YDaKQCLcB/s1600/new_1.gif"/>';
 }
