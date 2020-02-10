@@ -118,4 +118,4 @@ function showpageCount(json) {
     }
     }
     }
-    <script src="/feeds/posts/summary?alt=json-in-script&callback=showpageCount&max-results=99999" type="text/javascript"></script>
+   
