@@ -14,12 +14,12 @@ function showpageCount(json) {
     var html= '';
     var upPageHtml ='';
     var downPageHtml ='';
-    var pageCount=2;
+    var pageCount=7;
     var displayPageNum=5;
-    var firstPageWord = 'First';
-    var endPageWord = 'Last';
-    var upPageWord ='<';
-    var downPageWord ='>';
+    var firstPageWord = 'Đầu tiên';
+    var endPageWord = 'Cuối cùng';
+    var upPageWord ='Trước';
+    var downPageWord ='Sau';
     var labelHtml = '<span class="showpageNum"><a href="/search/label/'+thisLable+'?&max-results='+pageCount+'">';
     for(var i=0, post; post = json.feed.entry[i]; i++) {
     var timestamp = post.published.$t.substr(0,10);
